@@ -1,0 +1,8 @@
+#!/bin/bash
+LOGFILE=/tmp/hello-http.log
+while true
+do
+  fakedata username http.method enum:/,/login,/logout,/messages ipv4 --limit 1 >> $LOGFILE
+  sleep 1
+done
+exit 0
