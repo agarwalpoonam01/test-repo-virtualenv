@@ -1,0 +1,8 @@
+curl -s http://localhost:9877/metrics | grep cust
+python3 t_custom_exporter.py -f /tmp/test -e txt
+/tmp/test/ -> touch file.txt
+
+
+python3 t_memory-cpu.py
+python3 t_apche-exporter.py
+python3 t_timing_write_io_example.py
