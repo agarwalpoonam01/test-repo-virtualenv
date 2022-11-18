@@ -1,0 +1,57 @@
+Cluster Manager
+cd /opt/splunk/bin
+./splunk start --accept-license
+access ip and port
+change password changeme
+click search app
+
+
+Forwarder
+cd /opt/splunklfolder/bin
+
+./splunk start --accept-license
+
+./splunk add forward-server ip-clustermaster:port<9997> 
+
+admin changeme
+first time fails
+
+./splunk add monitor  /var/log/syslog -index main  -sourcetyppe MyUFSLogs
+
+Cluster Manager
+go to clustermanager node and run
+./splunk enable listen portnumber<9997>
+
+
+
+wget -O splunkforwarder-9.0.2-17e00c557dc1-x64-release.msi "https://download.splunk.com/products/universalforwarder/releases/9.0.2/windows/splunkforwarder-9.0.2-17e00c557dc1-x64-release.msi"
+
+wget -O splunkforwarder-9.0.2-17e00c557dc1-Linux-x86_64.tgz "https://download.splunk.com/products/universalforwarder/releases/9.0.2/linux/splunkforwarder-9.0.2-17e00c557dc1-Linux-x86_64.tgz"
+
+wget -O splunkforwarder-9.0.2-17e00c557dc1-linux-2.6-x86_64.rpm "https://download.splunk.com/products/universalforwarder/releases/9.0.2/linux/splunkforwarder-9.0.2-17e00c557dc1-linux-2.6-x86_64.rpm"
+
+wget -O splunkforwarder-9.0.2-17e00c557dc1-linux-2.6-x86_64.rpm "https://download.splunk.com/products/universalforwarder/releases/9.0.2/linux/splunkforwarder-9.0.2-17e00c557dc1-linux-2.6-x86_64.rpm"
+
+python -m pip install pip==9.0.3
+
+
+
+https://files.pythonhosted.org/packages/b4/93/417bb94467b7a49d77f21a701a27db71dc5fa857b9bde3e5f135985fdad5/prometheus-0.3.0.tar.gz
+
+
+C:\Users\hello\AppData\Local\Programs\Python\Python311\Scripts\pip3.11.exe install 'C:\Users\hello\Downloads\prometheus-0.3.0.tar.gz'
+
+C:\Users\hello\AppData\Local\Programs\Python\Python311\python.exe -m pip install pip==9.0.3 
+
+######
+
+C:\Users\hello\AppData\Local\Programs\Python\Python311\python.exe t_memory-cpu.py
+
+
+
+
+C:\Users\hello\AppData\Local\Programs\Python\Python311\python.exe t_timing_write_io_example.py
+
+
+C:\Users\hello\AppData\Local\Programs\Python\Python311\python.exe 
+curl https://bootstrap.pypa.io/pip/3.6/get-pip.py -o get-pip.py

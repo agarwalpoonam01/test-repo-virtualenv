@@ -1,0 +1,18 @@
+Run Exporter and collect metrics in prometheus and show on dashboard
+
+1) pip3 install prometheus_client
+2) cd C:\Users\hello\Documents\test-repo-virtualenv\
+3) python .\t_apche-exporter.py 
+4) update prometheus.yml
+5) restart prometheus:
+		prometheus.exe --config.file prometheus.yml --web.listen-address ":9090"
+
+1) mkdir C:\Users\hello\Downloads\tmp
+2) python .\t_custom_exporter.py  -f C:\Users\hello\Downloads\tmp\ -e txt
+3) In another terminal run:
+		cd C:\Users\hello\Downloads\tmp
+		New-Item q.txt
+		New-Item q.txt
+		New-Item q.txt
+
+

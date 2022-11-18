@@ -34,7 +34,7 @@ class CustomExporter:
 
     def create_gauge_for_metric(self, metric_name):
         if self.metric_dict.get(metric_name) is None:
-            self.metric_dict[metric_name] = Gauge("total_file", f"number of *{self.ext} files in {self.folder}")
+            self.metric_dict[metric_name] = Gauge("file_count", f"number of *{self.ext} files in {self.folder}")
     
     def set_value(self, metric_name):
         self.metric_dict[metric_name].set(self.count_file_in_folder())
