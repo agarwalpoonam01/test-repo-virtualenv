@@ -16,9 +16,10 @@ Configure and install Universal forwarder:
 7) .\splunk.exe install app ..\splunkclouduf.spl   ====> provide forwarder username and password
 8) .\splunk.exe restart
 9) On Cloud portal settings ===> indexes  ==> create index ==> mylogs 
-10)  .\splunk.exe add monitor C:\Users\hello\Documents\fake-logs\myfile3.log -index mylogs -sourcetype myUFSlog
+10)  .\splunk.exe add monitor C:\Users\hello\Documents\fake-logs\myfile4.log -index forwarder -sourcetype myUFSlog
 11) Visualize on dashboard
 
 Fake logs location
+0) pip3 install -r requirements.txt
 1) cd C:\Users\hello\Documents\fake-logs
 2) python fake-logs.py -n 500 -o myfile3.log -s 2
