@@ -14,5 +14,11 @@ Run Exporter and collect metrics in prometheus and show on dashboard
 		New-Item q.txt
 		New-Item q.txt
 		New-Item q.txt
+4) update prometheus.yml
+5) restart prometheus:
+		prometheus.exe --config.file prometheus.yml --web.listen-address ":9090"
+
+
+	
 
 
