@@ -1,0 +1,24 @@
+Get Splunk Cloud url:
+1) go to splunk free trial:
+		create account 
+		wait for splunk cloud link
+		login to cloud
+		change username and password
+
+Configure and install Universal forwarder:
+1) https://www.splunk.com/en_us/download/universal-forwarder.html?locale=en_us
+2) download the splunk forwarder
+3) install it :
+		you need splunk cloud hostname and password
+4) Download spl files -> apps -> universal forwarder -> download credentials
+5) cd C:\Program Files\SplunkUniversalForwarder\bin
+6) cp  'C:\Users\hello\Downloads\splunkclouduf.spl' ../
+7) .\splunk.exe install app ..\splunkclouduf.spl   ====> provide forwarder username and password
+8) .\splunk.exe restart
+9) On Cloud portal settings ===> indexes  ==> create index ==> mylogs 
+10)  .\splunk.exe add monitor C:\Users\hello\Documents\fake-logs\myfile3.log -index mylogs -sourcetype myUFSlog
+11) Visualize on dashboard
+
+Fake logs location
+1) cd C:\Users\hello\Documents\fake-logs
+2) python fake-logs.py -n 500 -o myfile3.log -s 2
